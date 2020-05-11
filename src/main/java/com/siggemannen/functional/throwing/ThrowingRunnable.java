@@ -26,4 +26,13 @@ public interface ThrowingRunnable extends Runnable
             Throwing.sneakyThrow(ex);
         }
     }
+    
+    /**
+     * Returns task name for this runnable
+     * @return
+     */
+    default String getName()
+    {
+        return null;
+    }
 }
