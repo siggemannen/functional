@@ -10,7 +10,11 @@ import java.util.function.Consumer;
 @FunctionalInterface
 public interface ThrowingConsumer<T> extends Consumer<T>
 {
-
+    /**
+     * Empty consumer running that does nothing
+     */
+    static final ThrowingConsumer NOOP_CONSUMER = e -> {};
+    
     /**
      * This is the actual method that consumes value and should be overridden
      * @param e value to consume

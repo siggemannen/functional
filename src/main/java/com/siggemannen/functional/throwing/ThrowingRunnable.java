@@ -6,6 +6,11 @@ package com.siggemannen.functional.throwing;
 public interface ThrowingRunnable extends Runnable
 {
     /**
+     * Empty runnable running that does nothing
+     */
+    static final ThrowingRunnable NOOP_RUNNABLE = () -> {};
+    
+    /**
      * This is the actual method that performs work and should be overridden
      * @throws Throwable exception that is thrown
      */
