@@ -1,2 +1,2 @@
 # functional
-Contains various classes to simplify java functional programming
+Contains various classes to allow throwing versions of functional interfaces like Runnable, Function, Supplier

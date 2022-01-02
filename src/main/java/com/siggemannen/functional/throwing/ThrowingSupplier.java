@@ -4,15 +4,18 @@ import java.util.function.Supplier;
 
 /**
  * A supplier interface that allows throwing exceptions but still possible to use in lambdas
+ *
+ * @param <T> type of object supplied by the interface
  */
 public interface ThrowingSupplier<T> extends Supplier<T>
 {
     /**
      * This is the actual method that supplies data and should be overridden
+     *
      * @throws Throwable exception that is thrown
      */
     T get0() throws Throwable;
-    
+
     /**
      * Overrides {@link Supplier#get()} to be able to handle the exceptions in <code>get0</code>
      */

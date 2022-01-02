@@ -5,7 +5,6 @@ package com.siggemannen.functional.throwing;
  */
 public final class Throwing
 {
-
     private Throwing()
     {
     }

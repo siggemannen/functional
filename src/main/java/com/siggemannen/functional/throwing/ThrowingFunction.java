@@ -9,16 +9,17 @@ public interface ThrowingFunction<T, R> extends Function<T, R>
 {
     /**
      * The actual method that performs work
+     * 
      * @param t argument to function
      * @return applied value
      * @throws Throwable exception that can be thrown from the function
      */
     R apply0(T t) throws Throwable;
-    @Override
-    
+
     /**
      * Implementation that "sneaks" in exception handling and re-throws exceptions from apply0 method, shouldn't be overridden
      */
+    @Override
     default R apply(T t)
     {
         try

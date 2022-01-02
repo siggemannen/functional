@@ -13,15 +13,18 @@ public interface ThrowingConsumer<T> extends Consumer<T>
     /**
      * Empty consumer running that does nothing
      */
-    static final ThrowingConsumer NOOP_CONSUMER = e -> {};
-    
+    static final ThrowingConsumer NOOP_CONSUMER = e ->
+    {
+    };
+
     /**
      * This is the actual method that consumes value and should be overridden
+     * 
      * @param e value to consume
      * @throws Throwable exception that is thrown
      */
     void accept0(T e) throws Throwable;
-    
+
     /**
      * Overrides {@link Consumer#accept()} to be able to handle the exceptions in <code>accept0</code>
      */

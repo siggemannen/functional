@@ -8,10 +8,13 @@ public interface ThrowingRunnable extends Runnable
     /**
      * Empty runnable running that does nothing
      */
-    static final ThrowingRunnable NOOP_RUNNABLE = () -> {};
-    
+    static final ThrowingRunnable NOOP_RUNNABLE = () ->
+    {
+    };
+
     /**
      * This is the actual method that performs work and should be overridden
+     * 
      * @throws Throwable exception that is thrown
      */
     void run0() throws Throwable;
@@ -31,9 +34,10 @@ public interface ThrowingRunnable extends Runnable
             Throwing.sneakyThrow(ex);
         }
     }
-    
+
     /**
      * Returns task name for this runnable
+     * 
      * @return
      */
     default String getName()
